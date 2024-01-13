@@ -161,8 +161,8 @@ Feature: Booking Management
           "additionalneeds" : null
     }
     """
-    Then the response status should be 500
-    And the body should be "Internal Server Error"
+    Then the response status should be 400
+    And the body should be "Bad request"
 
   Scenario: Edición de reserva fallida por campos inválidos
     Given I don't require authentication
@@ -217,8 +217,8 @@ Feature: Booking Management
           "additionalneeds" : "Dinner"
     }
     """
-    Then the response status should be 500
-    And the body should be "Internal Server Error"
+    Then the response status should be 400
+    And the body should be "Bad request"
 
     When I send a PATCH request to url "/booking/bookingId" with the following body
     """
@@ -253,8 +253,8 @@ Feature: Booking Management
       "additionalneeds" : "Breakfast"
     }
     """
-    Then the response status should be 500
-    And the body should be "Internal Server Error"
+    Then the response status should be 400
+    And the body should be "Bad request"
 
   Scenario: Creación de reserva fallida por campos vacíos
     Given I don't require authentication
@@ -272,8 +272,8 @@ Feature: Booking Management
           "additionalneeds" : null
     }
     """
-    Then the response status should be 500
-    And the body should be "Internal Server Error"
+    Then the response status should be 400
+    And the body should be "Bad request"
 
 
   Scenario: Obtención de reserva por id fallida por reserva inexistente
