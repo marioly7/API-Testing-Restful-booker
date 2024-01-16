@@ -1,10 +1,10 @@
-package FactoryRequest;
+package factoryRequest;
 
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
 
-public class RequestPut implements IRequest{
+public class RequestPatch implements IRequest{
 
     @Override
     public Response send(RequestInformation requestInformation) {
@@ -14,7 +14,7 @@ public class RequestPut implements IRequest{
                 .body(requestInformation.getBody())
                 .log().all()
             .when()
-                .put(requestInformation.getUrl());
+                .patch(requestInformation.getUrl());
 
         response.then().log().all();
         return response;

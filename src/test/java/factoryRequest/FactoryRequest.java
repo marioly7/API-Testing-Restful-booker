@@ -1,4 +1,4 @@
-package FactoryRequest;
+package factoryRequest;
 
 public class FactoryRequest {
 

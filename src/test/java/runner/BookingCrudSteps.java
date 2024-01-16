@@ -1,13 +1,13 @@
 package runner;
 
-import FactoryRequest.FactoryRequest;
+import factoryRequest.FactoryRequest;
 import config.Configuration;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
-import FactoryRequest.RequestInformation;
+import factoryRequest.RequestInformation;
 
 import java.util.Base64;
 import java.util.HashMap;

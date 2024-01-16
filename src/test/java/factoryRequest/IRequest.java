@@ -1,4 +1,4 @@
-package FactoryRequest;
+package factoryRequest;
 
 import io.restassured.response.Response;
 

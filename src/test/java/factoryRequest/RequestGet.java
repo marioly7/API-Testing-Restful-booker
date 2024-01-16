@@ -1,23 +1,21 @@
-package FactoryRequest;
+package factoryRequest;
 
-import io.restassured.http.Header;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
 
-public class RequestPost implements IRequest{
+public class RequestGet implements IRequest{
 
     @Override
     public Response send(RequestInformation requestInformation) {
         Response response =
             given()
                 .headers(requestInformation.getHeaders())
-                .body(requestInformation.getBody())
                 .log().all()
             .when()
-                .post(requestInformation.getUrl());
+                .get(requestInformation.getUrl());
+        
         response.then().log().all();
-
         return response;
     }
 }

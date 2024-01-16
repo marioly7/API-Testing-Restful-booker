@@ -1,4 +1,4 @@
-package FactoryRequest;
+package factoryRequest;
 
 import java.util.HashMap;
 import java.util.Map;
